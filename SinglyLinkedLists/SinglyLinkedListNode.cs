@@ -17,10 +17,11 @@ namespace SinglyLinkedLists
         {
             get { return this.next; }
             set { 
-            if (this == next)
+            if (this == value)
                 {
                     throw new ArgumentException("Can't set next to this");
-                } this.next = value;
+                }
+                this.next = value;
             } 
         }
         private string value;
