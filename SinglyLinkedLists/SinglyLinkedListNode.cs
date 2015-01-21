@@ -38,11 +38,14 @@ namespace SinglyLinkedLists
 
         public override bool Equals(Object obj)
         {
-            if (this.value == obj.ToString())
+            if (this.GetType() == obj.GetType())
             {
-                return true;
+                if (this.value == obj.ToString())
+                {
+                    return true;
+                }
             }
-        return false;
+            return false;
         }
 
         public static bool operator <(SinglyLinkedListNode node1, SinglyLinkedListNode node2)
@@ -67,7 +70,17 @@ namespace SinglyLinkedLists
         // READ: http://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx
         public int CompareTo(Object obj)
         {
-            throw new NotImplementedException();
+            int first = 0;
+            int second = 0;
+            foreach( char c in this.value)
+            {
+                first += (int)c;
+            }
+            foreach (char c in obj.ToString())
+            {
+                second += (int)c;
+            }
+            return first - second;
         }
 
         public bool IsLast()
