@@ -54,7 +54,11 @@ namespace SinglyLinkedLists
 
         public string ElementAt(int index)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < index; i++)
+            {
+                this.firstNode = this.firstNode.Next;
+            }
+            return this.firstNode.Value;
         }
 
         public string First()
