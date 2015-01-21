@@ -24,10 +24,25 @@ namespace SinglyLinkedLists
                 this.next = value;
             } 
         }
+        
         private string value;
         public string Value 
         {
             get { return this.value; }
+        }
+        
+        public override string ToString()
+        {
+            return value.ToString();
+        }
+
+        public override bool Equals(Object obj)
+        {
+            if (this.value == obj.ToString())
+            {
+                return true;
+            }
+        return false;
         }
 
         public static bool operator <(SinglyLinkedListNode node1, SinglyLinkedListNode node2)
@@ -57,7 +72,11 @@ namespace SinglyLinkedLists
 
         public bool IsLast()
         {
-            throw new NotImplementedException();
+            if (this.next == null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -53,7 +53,7 @@ namespace SinglyLinkedLists
 
         public string First()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public int IndexOf(string value)
