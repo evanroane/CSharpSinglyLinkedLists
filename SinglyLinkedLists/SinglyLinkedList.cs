@@ -54,6 +54,10 @@ namespace SinglyLinkedLists
 
         public string ElementAt(int index)
         {
+            if (this.firstNode == null)
+            {
+                throw new ArgumentOutOfRangeException(); 
+            }
             for (int i = 0; i < index; i++)
             {
                 this.firstNode = this.firstNode.Next;
