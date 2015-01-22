@@ -100,7 +100,11 @@ namespace SinglyLinkedLists
         // HINT 3: If you highlight code and right click, you can use the refactor menu to extract a method for you...
         public string Last()
         {
-            return null;
+            if (firstNode == null)
+            {
+                return null;
+            }
+            return firstNode.Next.Value;
         }
 
         public void Remove(string value)
