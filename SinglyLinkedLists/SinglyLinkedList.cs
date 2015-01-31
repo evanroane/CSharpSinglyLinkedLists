@@ -7,7 +7,6 @@ namespace SinglyLinkedLists
 {
     public class SinglyLinkedList
     {
-        private SinglyLinkedListNode firstNode;
         public SinglyLinkedList()
         {
             // NOTE: This constructor isn't necessary, once you've implemented the constructor below.
@@ -38,20 +37,7 @@ namespace SinglyLinkedLists
 
         public void AddLast(string value)
         {
-            if (firstNode == null)
-            {
-                firstNode = new SinglyLinkedListNode(value);
-            }
-            SinglyLinkedListNode node = this.firstNode;
-            while (true)
-            {
-                if (node.Next == null)
-                {
-                    break;
-                }
-                node = node.Next;
-            }
-            node.Next = new SinglyLinkedListNode(value);
+            throw new NotImplementedException();
         }
 
         // NOTE: There is more than one way to accomplish this.  One is O(n).  The other is O(1).
@@ -62,27 +48,12 @@ namespace SinglyLinkedLists
 
         public string ElementAt(int index)
         {
-            SinglyLinkedListNode node = this.firstNode;
-            if (node == null)
-            {
-                throw new ArgumentOutOfRangeException(); 
-            }
-            for (int i = 0; i < index + 1; i++)
-            {
-                node = node.Next;
-            }    
-            return node.Value;
+            throw new NotImplementedException();
         }
 
         public string First()
         {
-            if (firstNode == null)
-	        {
-		        return null;
-	        } else
-	        {
-                return firstNode.Value;
-	        }
+            throw new NotImplementedException();
         }
 
         public int IndexOf(string value)
@@ -100,19 +71,7 @@ namespace SinglyLinkedLists
         // HINT 3: If you highlight code and right click, you can use the refactor menu to extract a method for you...
         public string Last()
         {
-            SinglyLinkedListNode node = this.firstNode;
-            if (node == null)
-            {
-                return null;
-            }
-            while (true)
-            {
-                if (node.Next == null)
-                {
-                    return node.Value;
-                }
-                node = node.Next;
-            }
+            throw new NotImplementedException();
         }
 
         public void Remove(string value)
