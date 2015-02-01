@@ -62,14 +62,13 @@ namespace SinglyLinkedLists
 
         public bool IsLast()
         {
-            if (next != null)
-            {
-                return false;
-            }
-            else
-	        {
-                return true;
-	        }
+            return (next != null) ? false : true;
+        }
+
+        public override bool Equals(object obj)
+        {
+            SinglyLinkedListNode x = obj as SinglyLinkedListNode;
+            return (x != null) ? this.Value.Equals(x.Value) : false;
         }
     }
 }
