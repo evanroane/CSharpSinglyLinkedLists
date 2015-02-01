@@ -81,7 +81,7 @@ namespace SinglyLinkedLists
 
         public override string ToString()
         {
-            return "foo";
+            return this.Value;
         }
     }
 }
